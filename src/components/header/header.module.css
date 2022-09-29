@@ -1,0 +1,29 @@
+.sizeLogo{
+    width: 100px;
+    
+}
+
+
+.displayRight{
+    text-align: right;
+}
+
+.border{
+    border: 1px solid rgb(19, 18, 18);
+}
+
+.bgc{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(184,130,13,0.8995973389355743) 100%, rgba(0,212,255,1) 100%);
+}
+
+.colorTexte{
+    background: -webkit-linear-gradient(0deg, #d1a024 0%, rgba(228,139,52,1) 58%, #d7550c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.textBlack{
+    color: rgb(0,0,0);
+}
