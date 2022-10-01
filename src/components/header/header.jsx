@@ -13,7 +13,7 @@ const Header = () => {
     return(
         
             <>
-                <Container fluid className={style.bgc}>
+                <Container fluid className={`py-0 fixed-top ${style.bgc}`}>
                     <Row>
                     <Col ><img src={logo} alt="logo" className={style.sizeLogo} /></Col>
                     </Row>
@@ -21,7 +21,6 @@ const Header = () => {
                     <Col><h1 className={style.colorTexte}>Bookamania</h1></Col>
                     <Col className={style.displayRight}><Navbar /></Col>
                     </Row>
-                    <hr />
                 </Container>
             
         </>

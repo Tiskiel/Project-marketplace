@@ -1,22 +1,28 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import tempImage from './foodWars.jpg';
+import Col from 'react-bootstrap/Col';
 
-const Item = ({name, price, id, promo, categorie, pics}) => {
-
-    
+const Item = (props) => {
+    const {name, price, id, promo, categorie, pics, resume} = props;
+    console.log(pics);
     return (
-        <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={pics} />
-        <Card.Body>
-            <Card.Title>{name}</Card.Title>
-            <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content. {price}€
-            </Card.Text>
-            <Button variant="primary">Voir</Button><Button variant="dark">Favoris</Button>
-            <div>{promo ?? "Le prix de ce livre a baissé"}</div>
-        </Card.Body>
-        </Card>
+        <>
+            <Col>
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src={tempImage} alt="soma" />
+                    <Card.Body>
+                        <Card.Title>{name}, id : {id.slice(10,20)}</Card.Title>
+                        <div>{categorie}</div>
+                        <Card.Text>
+                        {resume} <span>{price}€</span>
+                        </Card.Text>
+                        <Button variant="primary">Voir</Button><Button variant="dark">Favoris</Button>
+                        {promo ? (<div>Le prix de ce livre a baissé</div>) : (<></>) }
+                    </Card.Body>
+                </Card>
+            </Col>
+        </>
     );
 }
 

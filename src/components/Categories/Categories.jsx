@@ -9,7 +9,9 @@ const Categories = () => {
         <h1>Choose your categories</h1>
         <Link to='/categories/manga' className={style.marginRight}>Manga</Link>
         <Link to='/categories/bd' className={style.marginRight}>BD</Link>
+        <Outlet />
     </div>
+    
   )
 }
 
